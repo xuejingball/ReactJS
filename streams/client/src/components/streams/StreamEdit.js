@@ -9,6 +9,7 @@ class StreamEdit extends React.Component {
         this.props.fetchStream(this.props.match.params.id);
     }
 
+    // this onSubmit function is a call back function passes to StreamForm, which will call editStream action creator
     onSubmit = formValues => {
         this.props.editStream(this.props.match.params.id, formValues);
     }
@@ -29,6 +30,7 @@ class StreamEdit extends React.Component {
     }
 };
 
+// componentDidMount call fetch single stream, so state only contains the fetched stream, state.streams.length === 1
 const mapStateToProps = (state, ownProps) => {
     return { stream: state.streams[ownProps.match.params.id] };
 };

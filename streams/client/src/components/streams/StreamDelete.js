@@ -15,7 +15,7 @@ class StreamDelete extends React.Component {
         this.props.deleteStream(this.props.match.params.id);
     }
 
-    // <React.Fragment></React.Fragment> is equavalent to <></>
+    // <React.Fragment></React.Fragment> is equivalent to <></>
     renderActions = () => {
         return (
             <React.Fragment>
